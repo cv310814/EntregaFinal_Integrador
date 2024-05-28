@@ -53,7 +53,7 @@ table {
 /* root */
 :root{
     --color-fondo: black;
-    --img-fondo: url('/img/yLwLzbz.png');
+    --img-fondo: url('../img/yLwLzbz.png');
 }
 
 /* Fin root */
