@@ -36,6 +36,14 @@ input[type="checkbox"] {
     margin-left: 10px;
 }
 
+.ancho{
+    max-width: 280px;
+}
+
+.abajo {
+    margin-bottom: 10px;
+}
+
 label {
     margin-left: 10px;
 }
