@@ -37,10 +37,14 @@ function verificarIngreso(){
     let msj = "";
     if(verificarCampoMail(campoMail) && verificarCampoPassword(campoPassword)){
         msj = "Mail y Password correctos";
+        redireccionar();
     }
     else{
         msj = "Mail y/o Password incorrectos"
     }
 
     alert(msj);
+}
+function redireccionar(){
+    window.location.replace("#")
 }
