@@ -1,19 +1,3 @@
-/*Lugar para colocar el login*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* fin login */
-
 /*CONSUMIR API*/
 /* Evento al hacer click consulta api people*/
 document.getElementById('misPersonajes').addEventListener('click', function (event) {

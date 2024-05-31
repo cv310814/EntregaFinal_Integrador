@@ -19,28 +19,64 @@ campoPassword.addEventListener("blur", ()=> verificarCampoPassword(campoPassword
 function verificarCampoMail(campo){
     console.log(campo.value)
     if (campo.value != "" && campo.value.length > 5){
-        console.log("Es un mail valido !");
-        return campo.value === mail;
+        if(campo.value === mail) {
+            campo.classList.remove('is-invalid');
+            campo.classList.add('is-valid');
+            return true;
+        } else {
+            campo.classList.remove('is-valid');
+            campo.classList.add('is-invalid');
+            return false;
+        }
+        
+    } else {
+        campo.classList.remove('is-valid');
+        campo.classList.add('is-invalid');
+        return false;
     }
 }
 
 function verificarCampoPassword(campo){
     console.log(campo.value)
     if (campo.value != "" && campo.value.length > 5){
-        console.log("Password valido !");
-        return campo.value === pass;
+        if(campo.value === pass) {
+            campo.classList.remove('is-invalid');
+            campo.classList.add('is-valid');
+            return true;
+        } else {
+            campo.classList.remove('is-valid');
+            campo.classList.add('is-invalid');
+            return false;
+        }
+        
+    } else {
+        campo.classList.remove('is-valid');
+        campo.classList.add('is-invalid');
+        return false;
     }
 }
 
 // funcion para verificar datos
 function verificarIngreso(){
     let msj = "";
-    if(verificarCampoMail(campoMail) && verificarCampoPassword(campoPassword)){
-        msj = "Mail y Password correctos";
-    }
-    else{
+    //buena practica
+    const emailValido = verificarCampoMail(campoMail);
+    const passValida = verificarCampoPassword(campoPassword);
+
+    if( emailValido && passValida ){
+        //msj = "Mail y Password correctos";
+        //Guardar usuario para colocarlo en dashboard
+        localStorage.setItem("usuario", campoMail.value);
+        loginCorrecto();
+
+    } else{
         msj = "Mail y/o Password incorrectos"
+        alert(msj);
     }
 
-    alert(msj);
+    
+}
+
+function loginCorrecto() {
+    window.location.replace("dashboard.html")
 }

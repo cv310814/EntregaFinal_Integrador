@@ -54,6 +54,7 @@ table {
 :root{
     --color-fondo: black;
     --img-fondo: url('../img/yLwLzbz.png');
+    --texto-color: #bbdde3;
 }
 
 /* Fin root */
@@ -91,6 +92,17 @@ header{
 
 footer{
     margin-top: 2rem;
-    
+}
 
+/*Login*/
+/*input fondo y texto*/
+.back{
+    background-color: transparent;
+    color: var(--texto-color);
+    border: 1px solid var(--texto-color);
+}
+
+.back:focus{
+    background-color: rgba(0, 0, 0, 0.75);
+    color: var(--texto-color);
 }
