@@ -46,5 +46,5 @@ function verificarIngreso(){
     alert(msj);
 }
 function redireccionar(){
-    window.location.replace("#")
+    window.location.replace("https://cv310814.github.io/EntregaFinal_Integrador/index.html")
 }
