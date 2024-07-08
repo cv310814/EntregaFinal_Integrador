@@ -1,0 +1,38 @@
+header{
+    display: block;
+    background-color: black;
+    color: rosybrown;
+}
+
+.titulo{   
+    display: inline;
+    font-size: 1.5rem;
+    text-align: center; 
+               
+}
+
+.animate__animated.animate__backInRight {
+    --animate-duration: 1s;
+    /*--animate-delay: 0.9s;*/
+  }
+  
+nav {
+    display: block;
+    height: 45px;
+    text-align: left;
+}
+
+nav a{
+    display: inline-block;
+    text-align: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.nav{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}
